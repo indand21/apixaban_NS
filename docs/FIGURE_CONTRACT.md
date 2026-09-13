@@ -1,0 +1,11 @@
+# Revised manuscript figure contract
+
+Delivery is a scientific manuscript in Word, with static PNG and vector PDF figures generated reproducibly in R. No online report or publishing is requested. Sources are the full precision CSV files in output/revised. Figures describe simulations, not measured patient trajectories. Arial, white backgrounds, charcoal text, quiet grids, and explicit units are used throughout. The final QA surface is the rendered manuscript.
+
+1. Steady state total and free concentration profiles: two line panels, 121 time points per stage at 5 mg every 12 hours; compare binding effects on total versus free concentration. Four ordered scenarios have fixed blue, gold, pink and charcoal colors with distinct line styles. All reference patients have eGFR 100, age 40 and weight 70 kg. Export 7.5 by 4 inches.
+2. Thrombin trajectories: four small multiples, 2401 time points, no drug versus 5 mg BID trough, feedforward mode. Binary blue solid and orange dashed lines; shared axes. This shows peak and timing changes without implying ETP suppression. Export 7.5 by 5.2 inches.
+3. Composite score dose curves: four small multiples, matched coupled and feedforward modes. Blue solid and orange dashed; shared logarithmic score axis, zero score omitted explicitly. Mathematical dose range 0 to 20 mg per administration is a stress test, not a prescribing range. Export 7.5 by 5.2 inches.
+4. Structural endpoint sensitivity: 4 stages by 6 combinations of assay duration and implicit protein C activation, fixed TF 5 pM and trough at 5 mg BID. Labeled heatmap of ETP suppression percent, single pink root with neutral low values. Positive suppression and near-zero entries shown numerically. Export 7.5 by 4 inches.
+5. Synthetic population score distribution: box plots by stage and feedback mode, 200 paired synthetic individuals per group. No confidence intervals or claims of calibrated population coverage. Blue and orange fills with black median marks. Export 7.5 by 4 inches; supplementary figure only.
+
+External observations and predictions use an exact numeric table because source-specific units, confidence intervals versus ranges, and cohort mismatch must remain explicit. No pooled validation statistic is computed. Cohort variability is not a sampling confidence interval. No graphical nomogram will be presented as clinical guidance.

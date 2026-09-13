@@ -1,0 +1,11 @@
+endpoint,metric,effect_size,ci_lower,ci_upper,units,comparison,population,n_total,n_events,source,pmid
+VTE,peak_thrombin,1.78,1.26,2.51,OR,"Q4 vs Q1",General population LITE ARIC+CHS,1438,434,"Lutsey et al. 2009 J Thromb Haemost",19656279
+VTE,peak_thrombin,1.20,1.07,1.34,OR,"per 1 SD (~100 nM)",General population LITE,1438,434,"Lutsey et al. 2009",19656279
+DVT,ETP,1.50,0.90,2.30,OR,">90th pct (>2109 nM*min)",DVT cases Leiden Thrombophilia,764,360,"van Hylckama Vlieg et al. 2007 J Thromb Haemost",17760809
+recurrent_VTE,ETP,2.90,1.30,6.60,HR,"high vs low",First unprovoked VTE off anticoagulation,188,40,"Besser et al. 2008 J Thromb Haemost",18680535
+recurrent_VTE,ETP,1.30,1.00,1.60,HR,"per 100 nM*L-1*min-1",First unprovoked VTE,188,40,"Besser et al. 2008",18680535
+recurrent_VTE,ETP,2.30,1.20,4.50,HR,"high vs low",Post-VTE off anticoagulation,914,120,"Hron et al. 2006 JAMA",16868297
+stroke,ETP_PRP,5.10,1.80,15.10,OR,"middle vs lowest tercile",Young stroke <50 yr,80,NA,"Faber et al. 2003 Pathophys Haemost Thromb",12853713
+stroke,peak_thrombin,1.31,1.01,1.69,HR,"per 1 SD",Elderly >65 yr Three-City cohort,9294,NA,"Poli et al. 2011 ATVB",21454811
+bleeding,PRU_low,11.50,2.90,45.70,HR,"PRU<=139 vs therapeutic",Post-PCI DAPT,8000,NA,"Tantry/Aradi 2013 JACC consensus",24076493
+bleeding,PRU_high,0.73,0.61,0.89,HR,"PRU>208 (protective)",Post-PCI ADAPT-DES,8000,NA,"Tantry/Aradi 2013 JACC",24076493

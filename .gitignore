@@ -1,0 +1,32 @@
+# R
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+
+# RStudio
+*.Rproj.user/
+
+# Compiled C solver (build locally; do not commit binaries)
+src/*.dll
+src/*.o
+src/*.so
+src/*.exe
+
+# Regenerable pipeline outputs (not tracked; regenerate via scripts/run_ns_pipeline.R)
+output/
+*.rds
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# Temporary
+*.tmp
+*.temp
+~$*.docx

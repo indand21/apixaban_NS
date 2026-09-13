@@ -1,0 +1,35 @@
+species_id,species_name,initial_nM,units,description,source
+1,TF,0.005,nM,Assay tissue factor trigger 5 pM overwritten by TF_pM argument,Fixed assay design
+2,VII,10.0,nM,Factor VII,Hockin 2002
+3,VIIa,0.1,nM,Activated Factor VII (trace),Hockin 2002
+4,TF_VII,0.0,nM,TF:VII complex,Initial=0
+5,TF_VIIa,0.0,nM,TF:VIIa complex,Initial=0
+6,X,170.0,nM,Factor X,Hockin 2002
+7,Xa,0.0,nM,Activated Factor X,Initial=0
+8,TF_VIIa_X,0.0,nM,TF:VIIa:X complex,Initial=0
+9,TF_VIIa_Xa,0.0,nM,TF:VIIa:Xa product complex,Initial=0
+10,IX,90.0,nM,Factor IX,Hockin 2002
+11,IXa,0.0,nM,Activated Factor IX,Initial=0
+12,TF_VIIa_IX,0.0,nM,TF:VIIa:IX complex,Initial=0
+13,II,1400.0,nM,Prothrombin (Factor II),Hockin 2002
+14,IIa,0.0,nM,Thrombin (Activated Factor II),Initial=0
+15,VIII,0.7,nM,Factor VIII,Hockin 2002
+16,VIIIa,0.0,nM,Activated Factor VIII,Initial=0
+17,IXa_VIIIa,0.0,nM,Intrinsic tenase (IXa:VIIIa) complex,Initial=0
+18,IXa_VIIIa_X,0.0,nM,Tenase:substrate complex,Initial=0
+19,V,20.0,nM,Factor V,Hockin 2002
+20,Va,0.0,nM,Activated Factor V,Initial=0
+21,Va_Xa,0.0,nM,Prothrombinase (Va:Xa) complex,Initial=0
+22,Va_Xa_II,0.0,nM,Prothrombinase:substrate complex,Initial=0
+23,mIIa,0.0,nM,Meizothrombin,Initial=0
+24,TFPI,2.5,nM,Tissue Factor Pathway Inhibitor,Hockin 2002
+25,TFPI_Xa,0.0,nM,TFPI:Xa complex,Initial=0
+26,TFPI_Xa_TF_VIIa,0.0,nM,TFPI:Xa:TF:VIIa quaternary complex,Initial=0
+27,ATIII,3400.0,nM,Antithrombin III,Hockin 2002
+28,ATIII_IIa,0.0,nM,ATIII:IIa complex (inactivated),Initial=0
+29,ATIII_Xa,0.0,nM,ATIII:Xa complex (inactivated),Initial=0
+30,ATIII_IXa,0.0,nM,ATIII:IXa complex (inactivated),Initial=0
+31,PC,60.0,nM,Protein C,Hockin 2002
+32,APC,0.0,nM,Activated Protein C,Initial=0
+33,VIIIa_i,0.0,nM,Inactivated Factor VIIIa,Initial=0
+34,Va_i,0.0,nM,Inactivated Factor Va,Initial=0

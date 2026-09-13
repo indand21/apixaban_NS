@@ -1,0 +1,20 @@
+parameter,value,unit,condition,source,pmid,confidence
+Kd_FXa_FVa_PCPS,1.0,nM,"FXa-FVa complex on PCPS vesicles","Krishnaswamy et al. 1990 J Biol Chem",2303476,high
+Kd_FXa_PCPS_alone,220,nM,"FXa monomer on PCPS vesicles (no FVa)","Baugh et al. 2000 J Biol Chem",PMC2764068,medium
+kon_FXa_PCPS,2.9e7,M-1.s-1,"FXa association to PCPS","Krishnaswamy et al. 1988 J Biol Chem",3346225,high
+koff_FXa_PCPS,3.3,s-1,"FXa dissociation from PCPS","Krishnaswamy et al. 1988",3346225,high
+kon_FVa_PCPS,5.7e7,M-1.s-1,"FVa association to PCPS","Krishnaswamy et al. 1988",3346225,high
+koff_FVa_PCPS,0.17,s-1,"FVa dissociation from PCPS","Krishnaswamy et al. 1988",3346225,high
+Km_prothrombin_FXa_alone,131000,nM,"Prothrombin Km for free FXa (no membrane)","Rosing et al. 1980 J Biol Chem",7350159,high
+Km_prothrombin_FXa_PS,58,nM,"Prothrombin Km for FXa on PS membrane (no FVa)","Rosing et al. 1980",7350159,high
+Km_prothrombin_prothrombinase,210,nM,"Prothrombin Km for full prothrombinase (FXa+FVa+Ca+PS)","Rosing et al. 1980",7350159,high
+Vmax_FXa_alone,0.61,mol_min-1_mol_Xa-1,"Prothrombin activation rate (FXa alone)","Rosing et al. 1980",7350159,high
+Vmax_FXa_PS,2.25,mol_min-1_mol_Xa-1,"Prothrombin activation rate (FXa + PS)","Rosing et al. 1980",7350159,high
+Vmax_prothrombinase,1919,mol_min-1_mol_Xa-1,"Prothrombin activation rate (full prothrombinase)","Rosing et al. 1980",7350159,high
+fold_enhancement_Vmax,3145,fold,"Vmax ratio: full prothrombinase / FXa alone","Rosing et al. 1980 (derived)",7350159,high
+kcat_KM_FXa_soluble,94,M-1.s-1,"Catalytic efficiency: FXa in solution","Baugh et al. 2000",PMC2764068,high
+kcat_KM_FXa_membrane,9000,M-1.s-1,"Catalytic efficiency: FXa on PS membrane","Baugh et al. 2000",PMC2764068,high
+kcat_KM_prothrombinase,1.2e8,M-1.s-1,"Catalytic efficiency: full prothrombinase complex","Baugh et al. 2000",PMC2764068,high
+FVa_enhances_FXa_affinity,100,fold,"FVa increases FXa affinity for PCPS","Krishnaswamy et al. 1990",2303476,high
+PS_dependence_type,linear,category,"PCPS dependence is linear not Hill-type","Krishnaswamy et al. 1988 — no saturation observed",3346225,high
+CKD_PS_procoagulant_fold,2.2,fold,"Uremic platelet PS procoagulant activity vs healthy","Wever et al. 2004 J Thromb Haemost (4.13/1.86)",15304031,medium

@@ -1,0 +1,11 @@
+species,Normal,NS_Mild,NS_Moderate,NS_Severe,source
+TF,1.00,1.05,1.10,1.20,"Provisional NS tissue-factor/microparticle activation default; review before clinical use"
+VII,1.00,1.05,1.08,1.12,"Provisional NS procoagulant factor default"
+VIII,1.00,1.20,1.40,1.70,"Nephrotic syndrome hypercoagulability: elevated FVIII reported in reviews; provisional severity scaling"
+V,1.00,1.05,1.10,1.20,"Provisional NS procoagulant factor default"
+II,1.00,1.05,1.10,1.15,"Provisional NS prothrombin/fibrinogen-rich procoagulant milieu default"
+IX,1.00,1.00,1.05,1.10,"Provisional NS intrinsic pathway default"
+X,1.00,1.00,1.05,1.10,"Provisional NS factor X default"
+ATIII,1.00,0.90,0.75,0.60,"Urinary antithrombin loss in nephrotic syndrome; provisional severity scaling"
+PC,1.00,0.95,0.90,0.85,"Protein C may be reduced/variable in NS; conservative provisional scaling"
+TFPI,1.00,1.00,1.00,1.00,"No NS-specific modifier applied by default"

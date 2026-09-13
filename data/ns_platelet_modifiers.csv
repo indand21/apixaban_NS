@@ -1,0 +1,6 @@
+parameter,Normal,NS_Mild,NS_Moderate,NS_Severe,mechanism
+k_thr,1.00,1.05,1.12,1.20,"Platelet hyperreactivity in nephrotic syndrome; provisional thrombin-response scaling"
+k_agg,1.00,1.08,1.18,1.30,"Platelet hyperaggregability in nephrotic syndrome; provisional scaling"
+k_txa_syn,1.00,1.05,1.15,1.25,"Increased platelet activation/eicosanoid signaling default"
+k_rel_adp,1.00,1.05,1.12,1.20,"Increased dense granule amplification default"
+FBG,1.00,1.10,1.25,1.45,"Hyperfibrinogenemia in nephrotic syndrome; modeled as fibrinogen substrate increase"

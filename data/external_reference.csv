@@ -1,0 +1,9 @@
+study,cohort,metric,value,lower,upper,unit,n,source,role
+Frost2013,Healthy,Cmax_total,128.5,NA,NA,ng/mL,6,https://doi.org/10.1111/bcp.12106,External aggregate comparison day7 5mg BID
+Frost2013,Healthy,Ctrough_total,49.6,NA,NA,ng/mL,6,https://doi.org/10.1111/bcp.12106,External aggregate comparison day7 5mg BID
+Frost2013,Healthy,AUCtau_total,1051.9,NA,NA,ng.h/mL,6,https://doi.org/10.1111/bcp.12106,External aggregate comparison day7 5mg BID
+Frost2013,Healthy,Tmax,4,2,4,h,6,https://doi.org/10.1111/bcp.12106,Median and observed range not confidence interval
+Kelddal2025,Healthy,Ctrough_total,51,39,64,ng/mL,10,https://doi.org/10.1016/j.xkme.2025.101136,Independent aggregate comparison 5mg BID mean and 95pct CI
+Kelddal2025,NS,Ctrough_total,35,28,43,ng/mL,11,https://doi.org/10.1016/j.xkme.2025.101136,Independent aggregate comparison 5mg BID mean and 95pct CI
+Kelddal2025,Healthy,ETP_nM_min,910,713,1107,nM.min,10,https://doi.org/10.1016/j.xkme.2025.101136,Assay units taken from methods; results HTML has inconsistent unit typography
+Kelddal2025,NS,ETP_nM_min,1096,868,1324,nM.min,11,https://doi.org/10.1016/j.xkme.2025.101136,Assay units taken from methods; TF reagent concentration not verified

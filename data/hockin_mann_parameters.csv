@@ -1,0 +1,41 @@
+param_id,param_name,value,units,reaction,description,source
+k1,k_TF_VII_bind,3.2e6,1/(M*s),R1,TF + VII -> TF:VII binding,Inherited reduced-model value; not independently source-verified
+k2,k_TF_VII_unbind,3.1e-3,1/s,R1,TF:VII dissociation,Inherited reduced-model value; not independently source-verified
+k3,k_TF_VIIa_bind,2.3e7,1/(M*s),R2,TF + VIIa -> TF:VIIa binding,Inherited reduced-model value; not independently source-verified
+k4,k_TF_VIIa_unbind,3.1e-3,1/s,R2,TF:VIIa dissociation,Inherited reduced-model value; not independently source-verified
+k5,k_TF_VII_autoact,4.4e5,1/(M*s),R3,TF:VIIa + TF:VII -> TF:VIIa + TF:VIIa autoactivation,Inherited reduced-model value; not independently source-verified
+k6,k_Xa_VII_act,1.3e7,1/(M*s),R4,Xa + TF:VII -> Xa + TF:VIIa activation by Xa,Inherited reduced-model value; not independently source-verified
+k7,k_IIa_VII_act,2.3e4,1/(M*s),R5,IIa + VII -> IIa + VIIa activation by thrombin,Inherited reduced-model value; not independently source-verified
+k8,k_TF_VIIa_X_bind,2.5e7,1/(M*s),R6,TF:VIIa + X -> TF:VIIa:X binding,Inherited reduced-model value; not independently source-verified
+k9,k_TF_VIIa_X_unbind,1.05,1/s,R6,TF:VIIa:X dissociation,Inherited reduced-model value; not independently source-verified
+k10,k_TF_VIIa_X_cat,6.0,1/s,R7,TF:VIIa:X -> TF:VIIa + Xa catalysis,Inherited reduced-model value; not independently source-verified
+k11,k_TF_VIIa_Xa_bind,2.2e7,1/(M*s),R8,TF:VIIa + Xa -> TF:VIIa:Xa product inhibition,Inherited reduced-model value; not independently source-verified
+k12,k_TF_VIIa_Xa_unbind,19.0,1/s,R8,TF:VIIa:Xa dissociation,Inherited reduced-model value; not independently source-verified
+k13,k_TF_VIIa_IX_bind,1.0e7,1/(M*s),R9,TF:VIIa + IX -> TF:VIIa:IX binding,Inherited reduced-model value; not independently source-verified
+k14,k_TF_VIIa_IX_unbind,2.4,1/s,R9,TF:VIIa:IX dissociation,Inherited reduced-model value; not independently source-verified
+k15,k_TF_VIIa_IX_cat,1.8,1/s,R10,TF:VIIa:IX -> TF:VIIa + IXa catalysis,Inherited reduced-model value; not independently source-verified
+k16,k_Xa_II_bind,7.5e3,1/(M*s),R11,Xa + II -> Xa:II binding (Xa alone cleaving prothrombin),Inherited reduced-model value; not independently source-verified
+k18,k_mIIa_gen,2.0e-2,1/s,R12,Xa generates meizothrombin (mIIa),Inherited reduced-model value; not independently source-verified
+k19,k_Va_bind_Xa,4.0e8,1/(M*s),R13,Va + Xa -> prothrombinase (Va:Xa) assembly,Inherited reduced-model value; not independently source-verified
+k20,k_Va_Xa_unbind,0.2,1/s,R13,Va:Xa dissociation,Inherited reduced-model value; not independently source-verified
+k21,k_pase_II_bind,1.0e8,1/(M*s),R14,Va:Xa + II -> Va:Xa:II prothrombinase-substrate binding,Inherited reduced-model value; not independently source-verified
+k22,k_pase_II_unbind,63.5,1/s,R14,Va:Xa:II dissociation,Inherited reduced-model value; not independently source-verified
+k23,k_pase_IIa_cat,1344.0,1/s,R15,Va:Xa:II -> Va:Xa + IIa prothrombinase catalysis,Inherited reduced-model value; not independently source-verified
+k24,k_IXa_VIIIa_bind,1.0e7,1/(M*s),R16,IXa + VIIIa -> IXa:VIIIa tenase assembly,Inherited reduced-model value; not independently source-verified
+k25,k_IXa_VIIIa_unbind,5.0e-3,1/s,R16,IXa:VIIIa dissociation,Inherited reduced-model value; not independently source-verified
+k26,k_tase_X_bind,1.0e8,1/(M*s),R17,IXa:VIIIa + X -> IXa:VIIIa:X tenase-substrate binding,Inherited reduced-model value; not independently source-verified
+k27,k_tase_X_unbind,1.0,1/s,R17,IXa:VIIIa:X dissociation,Inherited reduced-model value; not independently source-verified
+k28,k_tase_Xa_cat,8.2,1/s,R18,IXa:VIIIa:X -> IXa:VIIIa + Xa tenase catalysis,Inherited reduced-model value; not independently source-verified
+k29,k_IIa_VIII_act,2.0e7,1/(M*s),R19,IIa + VIII -> IIa + VIIIa activation by thrombin,Inherited reduced-model value; not independently source-verified
+k30,k_VIIIa_inact,6.0e-3,1/s,R20,VIIIa -> VIIIa_i spontaneous inactivation,Inherited reduced-model value; not independently source-verified
+k31,k_IIa_V_act,2.0e7,1/(M*s),R21,IIa + V -> IIa + Va activation by thrombin,Inherited reduced-model value; not independently source-verified
+k32,k_ATIII_IIa,7.1e3,1/(M*s),R22,ATIII + IIa -> ATIII:IIa inhibition,Inherited reduced-model value; not independently source-verified
+k33,k_ATIII_Xa,2.3e4,1/(M*s),R23,ATIII + Xa -> ATIII:Xa inhibition,Inherited reduced-model value; not independently source-verified
+k34,k_ATIII_IXa,4.9e2,1/(M*s),R24,ATIII + IXa -> ATIII:IXa inhibition,Inherited reduced-model value; not independently source-verified
+k35,k_TFPI_Xa_bind,4.0e5,1/(M*s),R25,TFPI + Xa -> TFPI:Xa binding,Inherited reduced-model value; not independently source-verified
+k36,k_TFPI_Xa_unbind,3.6e-4,1/s,R25,TFPI:Xa dissociation,Inherited reduced-model value; not independently source-verified
+k37,k_TFPI_Xa_TF_VIIa_bind,2.0e7,1/(M*s),R26,TFPI:Xa + TF:VIIa -> TFPI:Xa:TF:VIIa quaternary inhibition,Inherited reduced-model value; not independently source-verified
+k38,k_TFPI_Xa_TF_VIIa_unbind,1.0e-3,1/s,R26,TFPI:Xa:TF:VIIa dissociation,Inherited reduced-model value; not independently source-verified
+k39,k_IIa_PC_act,0,1/(M*s),R27,IIa + PC -> IIa + APC activation (thrombomodulin-dependent),Disabled without exogenous thrombomodulin; optional sensitivity 6.2e3 M^-1 s^-1
+k40,k_APC_Va_inact,2.0e7,1/(M*s),R28,APC + Va -> APC + Va_i inactivation,Inherited reduced-model value; not independently source-verified
+k41,k_APC_VIIIa_inact,2.0e7,1/(M*s),R29,APC + VIIIa -> APC + VIIIa_i inactivation,Inherited reduced-model value; not independently source-verified

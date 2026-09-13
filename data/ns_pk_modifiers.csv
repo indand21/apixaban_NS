@@ -1,0 +1,4 @@
+parameter,Normal,NS_Mild,NS_Moderate,NS_Severe,source
+fu_plasma,1,1.10,1.25,1.45,"Exploratory binding gradient; direction informed by Derebail 2023 PMID 36328100. Absolute baseline fu=0.13 differs from that study; not a fitted gradient."
+CLint_hepatic,1,1,1,1,"Primary null: no demonstrated NS-specific intrinsic nonrenal clearance change. Alternative apparent-free-clearance calibration is analyzed separately."
+CL_proteinuria,0,0.005,0.01,0.02,"Illustrative albumin-loss clearance L/h; severe anchor 10 g/day divided by 20 g/L divided by 24 h ~0.021 L/h. Assumes protein loss represents albumin; not measured urinary drug clearance."

@@ -1,0 +1,5 @@
+parameter,value,unit,description,source
+Km_PS,500,model_surface_units,Half-maximum surface signal,Exploratory assumption; not calibrated to clinical data
+n_ps,1,unitless,Hill exponent,Exploratory noncooperative response
+alpha_assembly,0.5,unitless,Maximum incremental assembly enhancement,Exploratory structural scenario; possible double counting of phospholipid effects
+alpha_catalysis,0.5,unitless,Maximum incremental catalytic enhancement,Exploratory structural scenario; not an upper bound on clinical dose

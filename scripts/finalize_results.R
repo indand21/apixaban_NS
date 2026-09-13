@@ -1,0 +1,22 @@
+source('scripts/load_project.R')
+expected<-c(reference_scenarios=32,surrogate_optima=8,external_comparison=8,
+  structural_sensitivity=216,local_sensitivity=88,patient_factor_grid=100,tf_prior_propagation=800)
+checks<-lapply(names(expected),function(n){
+  x<-read.csv(file.path('output/revised',paste0(n,'.csv')))
+  data.frame(dataset=n,rows=nrow(x),expected=expected[n],pass=nrow(x)==expected[n])
+})
+v<-read.csv('output/revised/synthetic_population.csv');n<-length(unique(v$id))
+checks[[length(checks)+1]]<-data.frame(dataset='synthetic_population',rows=nrow(v),expected=n*8,
+  pass=nrow(v)==n*8&&!anyDuplicated(v[,c('id','stage','mode')])&&all(table(v$id,v$stage,v$mode)==1)&&all(is.finite(v$score)))
+t<-read.csv('output/revised/tf_prior_propagation.csv')
+checks[[length(checks)+1]]<-data.frame(dataset='tf_unique_keys',rows=nrow(t),expected=800,
+  pass=!anyDuplicated(t[,c('draw','stage')])&&all(table(t$draw,t$stage)==1)&&all(is.finite(t$score)))
+r<-do.call(rbind,checks);write.csv(r,'output/revised/result_integrity.csv',row.names=FALSE)
+stopifnot(all(r$pass),all(read.csv('output/revised/revision_tests.csv')$pass),all(read.csv('output/revised/test_suite_status.csv')$pass))
+inputs<-c(list.files('R',full.names=TRUE),list.files('data',full.names=TRUE),
+  list.files('src',pattern='[.]c$',full.names=TRUE),list.files('scripts',full.names=TRUE),list.files('tests',full.names=TRUE))
+inputs<-inputs[!file.info(inputs)$isdir]
+write.csv(data.frame(path=inputs,md5=unname(tools::md5sum(inputs))),'output/revised/input_manifest.csv',row.names=FALSE)
+capture.output(sessionInfo(),file='output/revised/sessionInfo.txt')
+writeLines(format(Sys.time(),tz='UTC',usetz=TRUE),'output/revised/completed_at.txt')
+cat('RESULT INTEGRITY AND FINALIZATION COMPLETE\n')

@@ -1,0 +1,40 @@
+source('scripts/load_project.R')
+stages<-c('Normal','NS_Mild','NS_Moderate','NS_Severe')
+n<-as.integer(Sys.getenv('NS_N_PATIENTS','200'))
+patients<-lapply(seq_len(n),function(i)sample_virtual_patient(seed=20260909+i))
+sig<-digest::digest(c(tools::md5sum(c(list.files('R',full.names=TRUE),list.files('data',full.names=TRUE),'src/qsp_core.c')),n))
+checkpoint_dir<-file.path('output/revised/checkpoints',paste0('population_',sig))
+dir.create(checkpoint_dir,recursive=TRUE,showWarnings=FALSE)
+workers<-as.integer(Sys.getenv('NS_WORKERS','6'))
+pop_cluster<-parallel::makePSOCKcluster(workers,outfile='output/revised/population_progress.log')
+parallel::clusterExport(pop_cluster,c('patients','stages','checkpoint_dir'))
+parallel::clusterEvalQ(pop_cluster,{source('scripts/load_project.R');load_fast_solver();NULL})
+result<-parallel::parLapplyLB(pop_cluster,seq_len(n*4),function(j){
+  file<-file.path(checkpoint_dir,sprintf('case_%04d.csv',j))
+  if(file.exists(file))return(read.csv(file))
+  st<-stages[(j-1)%/%length(patients)+1];id<-(j-1)%%length(patients)+1
+  pt<-patients[[id]];pt$ckd_stage<-st;pt$egfr<-100;pr<-prepare_patient(pt)
+  ans<-do.call(rbind,lapply(c(FALSE,TRUE),function(mode){
+    o<-optimize_prepared(pr,mode);x<-evaluate_prepared(pr,5,mode)
+    data.frame(id=id,stage=st,mode=if(mode)'coupled' else 'feedforward',
+      weight=pt$body_weight,age=pt$age,optimal_dose=o$optimal_dose,score=o$max_TI,
+      boundary=o$boundary,weak_objective=o$max_TI<.001,score_etp=o$TI_etp,
+      peak_5mg=x$tga_metrics$peak_thrombin,ETP_5mg=x$tga_metrics$ETP_nM_min,
+      HC_5mg=x$hemostatic_metrics$HC,AUC_total_5mg=x$pk_metrics$AUCtau_total,AUC_free_5mg=x$pk_metrics$AUCtau_free)
+  }))
+  write.csv(ans,paste0(file,'.tmp'),row.names=FALSE);stopifnot(file.rename(paste0(file,'.tmp'),file))
+  cat('Completed population case',j,'\n');ans
+},chunk.size=1)
+write.csv(do.call(rbind,result),'output/revised/synthetic_population.csv',row.names=FALSE)
+grid<-expand.grid(weight=c(50,60,70,80,90),age=c(20,35,50,65,80),stage=stages,stringsAsFactors=FALSE)
+parallel::clusterExport(pop_cluster,'grid')
+grid_result<-parallel::parLapplyLB(pop_cluster,seq_len(nrow(grid)),function(i){
+  file<-file.path(checkpoint_dir,sprintf('grid_%03d.csv',i))
+  if(file.exists(file))return(read.csv(file))
+  pr<-prepare_patient(reference_patient(grid$stage[i],100,grid$weight[i],grid$age[i]));o<-optimize_prepared(pr)
+  ans<-data.frame(grid[i,],dose=o$optimal_dose,score=o$max_TI,weak_objective=o$max_TI<.001)
+  write.csv(ans,paste0(file,'.tmp'),row.names=FALSE);stopifnot(file.rename(paste0(file,'.tmp'),file));ans
+},chunk.size=1)
+parallel::stopCluster(pop_cluster)
+write.csv(do.call(rbind,grid_result),'output/revised/patient_factor_grid.csv',row.names=FALSE)
+cat('POPULATION AND GRID COMPLETE\n')
