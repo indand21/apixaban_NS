@@ -11,6 +11,8 @@ manifest, and software-version information) and `output/_run_logs`
 (verification logs); neither is checked in, since both are fully
 reproducible from the code and data here.
 
+- Tier-1 revision rationale (endpoint selection, PK and NS-severity
+  calibration): `docs/TIER1_REVISION_SUMMARY.md`.
 - Calibration inputs: `data/pk_calibration.csv` and
   `data/ns_severity_calibration.csv`; refitting them regenerates fit
   summaries under `output/revised/pk_calibration_fit.csv` and

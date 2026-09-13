@@ -4,7 +4,7 @@
 
 Share with caveats as an exploratory numerical modeling study. Not qualified for clinical dosing, thrombosis prediction, bleeding prediction, or regulatory decision-making.
 
-Updated after the Tier-1 revision. Absorption and the NS coagulation gradient are now calibrated, so five of the eight external comparison rows are fitted and agreement with them is not evidence of validation. The status of each row is given below and in the manuscript.
+Updated after the Tier-1 revision (see docs/TIER1_REVISION_SUMMARY.md). Absorption and the NS coagulation gradient are now calibrated, so five of the eight external comparison rows are fitted and agreement with them is not evidence of validation. The status of each row is given below and in the manuscript.
 
 ## Methodology and corrections
 
