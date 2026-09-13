@@ -11,8 +11,6 @@ manifest, and software-version information) and `output/_run_logs`
 (verification logs); neither is checked in, since both are fully
 reproducible from the code and data here.
 
-- Scientific audits: `docs/TIER1_REVISION_2026-09-09.md` (current) and
-  `docs/REVISION_AUDIT_2026-09-09.md` (preceding).
 - Calibration inputs: `data/pk_calibration.csv` and
   `data/ns_severity_calibration.csv`; refitting them regenerates fit
   summaries under `output/revised/pk_calibration_fit.csv` and
@@ -45,8 +43,7 @@ Of the eight external comparison rows, the four Frost 2013 moments and the Keldd
 ## Scope of this repository
 
 This repository ships the model, its calibration inputs, its test suite, and
-its technical/audit documentation. It does not include manuscript sources,
+its technical documentation. It does not include manuscript sources,
 generated results, or superseded/archived material. Legacy analysis scripts
 that were superseded during development stop explicitly (see their `stop()`
-guard) rather than silently regenerating outdated outputs; this is
-intentional and documented in `docs/TIER1_REVISION_2026-09-09.md`.
+guard) rather than silently regenerating outdated outputs.

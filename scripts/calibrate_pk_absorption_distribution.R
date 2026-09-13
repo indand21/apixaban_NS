@@ -22,7 +22,8 @@
 # observed delay, not an independently identified physiological transit time.
 #
 # An earlier version of this script also fitted a deep peripheral compartment.
-# It was removed: see docs/TIER1_REVISION_2026-09-09.md.
+# It was removed after review found it contributed negligibly to the fit
+# while making the terminal half-life window-dependent.
 source('scripts/load_project.R')
 
 obs <- read.csv('data/external_reference.csv', stringsAsFactors = FALSE)
